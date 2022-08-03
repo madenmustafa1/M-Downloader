@@ -34,7 +34,6 @@ class DownloadActivity : ComponentActivity() {
         setContent {
             MDownloaderTheme {
                 Surface(
-
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
@@ -48,9 +47,7 @@ class DownloadActivity : ComponentActivity() {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun DefaultPreview() {
-    MDownloaderTheme {
-        DownloadPage()
-    }
+    MDownloaderTheme { DownloadPage() }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
