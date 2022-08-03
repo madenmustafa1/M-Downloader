@@ -1,4 +1,4 @@
-package com.maden.m_downloader.view
+package com.maden.m_downloader.view.download_activity
 
 import android.os.Environment
 import androidx.lifecycle.LiveData
@@ -11,6 +11,8 @@ import com.yausername.youtubedl_android.YoutubeDL
 import com.yausername.youtubedl_android.YoutubeDLRequest
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.io.File
 import java.lang.Exception
@@ -56,5 +58,13 @@ class DownloadVideoViewModel: ViewModel() {
                 )
             }
         }
+    }
+
+
+    private val _linkTextField = MutableStateFlow("")
+    val linkTextField = _linkTextField.asStateFlow()
+
+    fun setName(name: String) {
+        _linkTextField.value = name
     }
 }

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">M-Downloader</string>
+    <string name="title_activity_download">DownloadActivity</string>
+    <string name="download_button">İndir</string>
+
+    <string name="download_activity_title">Lütfen indireceğiniz videonun linkini aşağıya kopyalayınız.</string>
 </resources>
